@@ -1,0 +1,149 @@
+/* c-aim
+------------------------------------------------------------------- */
+.c-aim {
+    .var () { @root: ~'.c-aim'; }.var;
+    margin: 0 auto;
+    margin-top: 70px;
+    max-width: 1050px;
+
+    &__flex {
+        display: flex;
+        margin-top: 70px;
+
+        @media @max-767 {
+            margin-top: 50px;
+        }
+
+        @media @max-989 {
+            flex-direction: column;
+        }
+
+        @media @min-990 {
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        @media @max-767 {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 30px;
+            padding-top: 30px;
+        }
+
+        @media @min-768 and @max-989 {
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+
+        @media @min-990 {
+            max-width: 260px;
+            flex-direction: column;
+        }
+
+        &:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: @color-7;
+
+            @media @max-767 {
+                bottom: -30px;
+                margin-left: -40px;
+                width: calc(~ '100% + 80px');
+            }
+
+            @media @min-768 and @max-989 {
+                bottom: -50px;
+            }
+
+            @media @max-989 {
+                left: 0;
+                right: 0;
+                height: 1px;
+            }
+
+            @media @min-990 {
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                right: -14%;
+            }
+
+            @media @min-1025 {
+                right: -22%;
+            }
+        }
+
+        &:last-child:before {
+            display: none;
+        }
+    }
+
+    &__title {
+        line-height: 1;
+        font-size: 24px;
+        font-weight: 500;
+
+        @media @min-768 and @max-989 {
+            width: 40%;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        @media @max-767 {
+            margin-top: 30px;
+        }
+
+        @media @min-768 and @max-989 {
+            width: 60%;
+        }
+
+        @media @min-990 {
+            margin-top: 30px;
+        }
+    }
+
+    &__list {
+        flex-grow: 1;
+
+        &--item {
+            display: flex;
+            margin-top: 16px;
+            text-transform: uppercase;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:before {
+                min-width: 15px;
+                min-height: 15px;
+                content: '';
+                display: block;
+                margin-right: 15px;
+                background: url(../img/5.png) no-repeat;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 30px;
+    }
+}
+
+
+// influence
+// -------------------------------------------------------------------

@@ -1,0 +1,97 @@
+/* c-title
+------------------------------------------------------------------- */
+.c-title {
+    width: 100%;
+    font-size: 29px;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media @min-768 {
+        font-size: 48px;
+    }
+
+    @media @min-1025 {
+        font-size: 72px;
+    }
+
+    &--sub {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+
+        @media @min-768 {
+            font-size: 24px;
+        }
+    }
+
+    & + &--sub {
+        margin-top: 30px;
+
+        @media @max-767 {
+            margin-top: 18px;
+        }
+    }
+
+    &--section {
+        font-size: 16px;
+        font-weight: 900;
+        text-align: center;
+        position: relative;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+
+        @media @min-768 {
+            font-size: 24px;
+        }
+
+        &__span {
+            @media @min-768 {
+                padding: 0 40px;
+                position: relative;
+                background: @color-3;
+            }
+        }
+
+        &:before {
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            content: '';
+            position: absolute;
+            background: @color-4;
+            display: none;
+
+            @media @min-768 {
+                display: block;
+            }
+        }
+    }
+}
+
+
+// influence
+// -------------------------------------------------------------------
+.c-aim .c-title {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+
+    @media @max-767 {
+        margin-left: -20px;
+        width: calc(~ '100% + 40px');
+    }
+
+    @media @min-768 and @max-989 {
+        padding-right: 16px;
+    }
+}
+
+.l-container .c-title {
+    @media @max-767 {
+        margin-left: -24px;
+        width: calc(~ '100% + 48px');
+    }
+}

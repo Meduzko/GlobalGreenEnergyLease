@@ -1,0 +1,119 @@
+/* c-carousel
+------------------------------------------------------------------- */
+@media @min-768 and @max-1024 {
+
+    .c-carousel {
+        z-index: 1;
+        width: 100%;
+        display: none;
+        position: relative;
+
+        &.owl-stage {
+            position: relative;
+            touch-action: pan-Y;
+            backface-visibility: hidden;
+
+            &:after {
+                height: 0;
+                clear: both;
+                content: ".";
+                line-height: 0;
+                display: block;
+                visibility: hidden;
+            }
+        }
+
+        .owl-stage-outer {
+            overflow: hidden;
+            position: relative;
+            transform: translate3d(0px, 0px, 0px);
+        }
+
+        .owl-wrapper,
+        .owl-item {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .owl-item {
+            float: left;
+            min-height: 1px;
+            position: relative;
+            backface-visibility: hidden;
+            -webkit-touch-callout: none;
+        }
+
+        .owl-nav.disabled,
+        .owl-dots.disabled {
+            display: none;
+        }
+
+        .owl-prev,
+        .owl-next,
+        .owl-dot {
+            cursor: hand;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        &.owl-loaded {
+            display: block;
+        }
+
+        &.owl-loading {
+            opacity: 0;
+            display: block;
+        }
+
+        &.owl-hidden {
+            opacity: 0;
+        }
+
+        &.owl-refresh .owl-item {
+            visibility: hidden;
+        }
+
+        &.owl-drag .owl-item {
+            user-select: none;
+        }
+
+        &.owl-grab {
+            cursor: move;
+            cursor: grab;
+        }
+
+        &.owl-rtl {
+            direction: rtl;
+        }
+
+        &.owl-rtl .owl-item {
+            float: right;
+        }
+
+        .animated {
+            animation-duration: 1000ms;
+            animation-fill-mode: both;
+        }
+
+        .owl-animated-in {
+            z-index: 0;
+        }
+
+        .owl-animated-out {
+            z-index: 1;
+        }
+
+        .fadeOut {
+            animation-name: fadeOut;
+        }
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

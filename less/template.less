@@ -1,0 +1,100 @@
+/* body
+------------------------------------------------------------------- */
+.body {
+    color: @color-2;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    min-width: 320px;
+    background: @color-3;
+}
+
+/* header
+------------------------------------------------------------------- */
+.header {
+    z-index: 1;
+    min-height: 74px;
+    max-height: 74px;
+    background: @color-1;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+
+    @media @max-767 {
+        // min-height: 80px;
+        // max-height: 80px;
+        min-height: 54px;
+        max-height: 54px;
+    }
+}
+
+/* main
+------------------------------------------------------------------- */
+.main {
+    padding-bottom: 40px;
+
+    @media @min-768 {
+        padding-bottom: 70px;
+    }
+}
+
+/* footer
+------------------------------------------------------------------- */
+.footer {
+
+    &__wrap {
+        padding: 30px 0;
+        text-align: center;
+        background: @color-2;
+
+        @media @min-768 {
+            padding: 64px 0;
+            background: @color-2 url(../img/23.png) 50% 50% no-repeat;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__phone, &__email {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: @color-10;
+        margin: 6px 14px;
+
+        @media @min-768 {
+            font-size: 18px;
+        }
+
+        &:before {
+            content: '';
+            margin-right: 6px;
+        }
+    }
+
+    &__phone:before {
+        width: 9px;
+        height: 13px;
+        background: url(../img/24.png) 50% 50% no-repeat;
+    }
+
+    &__email:before {
+        width: 15px;
+        height: 11px;
+        background: url(../img/25.png) 50% 50% no-repeat;
+    }
+
+    &__copyright {
+        color: @color-9;
+        font-size: 12px;
+        font-weight: 300;
+        margin-top: 10px;
+
+        @media @min-768 {
+            margin-top: 0;
+            font-size: 14px;
+        }
+    }
+}
